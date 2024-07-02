@@ -1,6 +1,7 @@
-import createElement from "./createElement"
-import render from "./render"
+import createElement from "./createElement.js"
+import render from "./render.js"
+import useState from "../hooks/useState.js"
 
-const Respond = {createElement, render}
+const Respond = {createElement, render, useState}
 
 export default Respond

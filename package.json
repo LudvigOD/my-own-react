@@ -4,13 +4,25 @@
   "main": "index.js",
   "type": "module",
   "directories": {
-    "test": "tests"
+    "test": "node tests/renderTest.js"
   },
   "scripts": {
-    "test": "node tests/testCreateElement.js"
+    "test": "node tests/testCreateElement.js",
+    "build": "babel tests -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "The purpose of this project was to create my own version of react, which I call Respond (get it?), in order to learn how react really works under the hood and why it is an effective framework for web programming.",
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-syntax-jsx": "^7.24.7",
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
