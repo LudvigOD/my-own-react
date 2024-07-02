@@ -9,4 +9,4 @@ The purpose of this project was to create my own version of react, which I call 
 
 ## Problems I faced 🚧
 * I hade som import problems.
-* After I switched from directly setting and getting values, from my global folder, to using get and set functions I forgot to make my variables in the global folder private and that caused some conflicts.
+* After I switched from directly setting and getting variables, from my global folder, to using get and set functions I forgot to make my variables in the global folder private and that caused some conflicts.
