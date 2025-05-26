@@ -1,4 +1,4 @@
-// creates a DOM node and updates its props
+// creates a DOM node and sets its props
 export function createDom(fiber) {
   const dom =
     fiber.type == "TEXT_ELEMENT"
