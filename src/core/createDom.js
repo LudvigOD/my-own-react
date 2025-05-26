@@ -1,3 +1,4 @@
+// creates a DOM node and updates its props
 export function createDom(fiber) {
   const dom =
     fiber.type == "TEXT_ELEMENT"
@@ -14,10 +15,12 @@ const isProperty = key =>
   key !== "children" && !isEvent(key)
 const isNew = (prev, next) => key =>
   prev[key] !== next[key]
-const isGone = (prev, next) => key => !(key in next)
+const isGone = (prev, next) => key => !(key in next) // prev is there fore consistancy and future features
 
+// Update the props for one node
+// Basically checks 
 export function updateDom(dom, prevProps, nextProps) {
-  //Remove old or changed event listeners
+  //Remove old (not existing in new) or changed event listeners
   Object.keys(prevProps)
     .filter(isEvent)
     .filter(
@@ -35,7 +38,7 @@ export function updateDom(dom, prevProps, nextProps) {
       )
     })
 
-  // Remove old properties
+  // Remove old properties that are not children and not event listener
   Object.keys(prevProps)
     .filter(isProperty)
     .filter(isGone(prevProps, nextProps))
