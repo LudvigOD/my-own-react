@@ -1,3 +1,16 @@
+/*
+An element is basically just an JS object that holds info about 
+a real HTML element.
+
+A fiber is a wrapper for an element, with extra info about:
+ - child and siblings (child = first fiber of children list, siblings = fibers on the same "layer"), 
+ - effectTag: the operation that needs to be worked on
+ - alternate: old fiber, if this is an update
+ - dom: holds the real node, the "HTMLElement" (if it exists)
+*/
+
+
+// Global constants (:<
 let wipFiber = null
 let hookIndex = null
 let wipRoot = null
